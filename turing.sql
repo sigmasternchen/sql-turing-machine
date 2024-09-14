@@ -28,7 +28,7 @@ INSERT INTO program VALUES
   -- search right for 'a': verify value
   (012,        0  , 100,        0  ,  0, false, false),
   (012, ASCII('a'), 001,        0  , -1, false, false),
-  (012, ASCII('b'), 101,        0  ,  0, false, false), -- 1 expected, 2 found
+  (012, ASCII('b'), 101,        0  ,  0, false, false), -- 'a' expected, 'b' found
   
   -- search right for 'b'
   (016,        0  , 017,        0  , -1, false, false), -- end found
@@ -37,7 +37,7 @@ INSERT INTO program VALUES
   
   -- search right for 'b': verify value
   (017,        0  , 100,        0  ,  0, false, false),
-  (017, ASCII('a'), 101,        0  ,  0, false, false), -- 2 expected, 1 found
+  (017, ASCII('a'), 101,        0  ,  0, false, false), -- 'b' expected, 'a' found
   (017, ASCII('b'), 001,        0  , -1, false, false), 
   
   
@@ -54,7 +54,7 @@ INSERT INTO program VALUES
   -- search left for 'a': verify value
   (022,        0  , 100,        0  ,  0, false, false),
   (022, ASCII('a'), 000,        0  ,  1, false, false),
-  (022, ASCII('b'), 101,        0  ,  0, false, false), -- 1 expected, 2 found
+  (022, ASCII('b'), 101,        0  ,  0, false, false), -- 'a' expected, 'b' found
   
   -- search left for 'b'
   (026,        0  , 027,        0  ,  1, false, false), -- end found
@@ -63,7 +63,7 @@ INSERT INTO program VALUES
   
   -- search left for 'b': verify value
   (027,        0  , 100,        0  ,  0, false, false),
-  (027, ASCII('a'), 101,        0  ,  0, false, false), -- 2 expected, 1 found
+  (027, ASCII('a'), 101,        0  ,  0, false, false), -- 'b' expected, 'a' found
   (027, ASCII('b'), 000,        0  ,  1, false, false), 
   
   
