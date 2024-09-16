@@ -14,6 +14,7 @@ CREATE TABLE program (
   reject BOOL DEFAULT false
 );
 
+-- This program is a binary palindrome recognizer, using the value 'a' and 'b'.
 INSERT INTO program VALUES 
   -- search right
   (000,        0  , 100,        0  , 0, false, false), -- input is empty; accept
